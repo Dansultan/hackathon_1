@@ -1,9 +1,17 @@
+
+//calculation from glasses to contact lenses
 var sphere_1;
 var newshphere_1;
 var cyl_1;
 var totalcyl_1;
 var newcyl_1;
-var total_power1;
+var total_power1; 
+
+
+//style of the result
+var resultat = document.getElementById('result');
+resultat.style.color= '#d4af37';
+resultat.style.fontSize= 'larger';
 
 document.getElementById("glassCalculate").onclick = function(){
     sphere_1 = parseFloat(document.getElementById('sph_1').value);
@@ -11,9 +19,11 @@ document.getElementById("glassCalculate").onclick = function(){
     cyl_1 = parseFloat(document.getElementById('cyl_1').value);
     total_power1 = sphere_1+cyl_1;
     newcyl_1 =  (total_power1/(1-(0.012*total_power1)))- sphere_1;
-    document.getElementById('result').innerHTML = "Your new prescription is :" +newsphere_1.toFixed(2) + " sph and "+newcyl_1.toFixed(2) + " cylinder" ;};
+    alert(resultat.innerHTML = "Your new prescription is :" +newsphere_1.toFixed(2) + " sph and "+newcyl_1.toFixed(2) + " cylinder") ;};
 
 
+
+//calculation from contact lenses to glasses
 
 var sphere_2;
 var newshphere_2;
@@ -28,7 +38,7 @@ document.getElementById("lensCalculate").onclick = function(){
     cyl_2 = parseFloat(document.getElementById('cyl_2').value);
     total_power2 = sphere_2+cyl_2;
     newcyl_2 =  (total_power2/(1+(0.012*total_power2)))- sphere_2;
-    document.getElementById('result').innerHTML = "Your new prescription is :" +newsphere_2.toFixed(2) + " sph and "+newcyl_2.toFixed(2) + " cylinder" };
+    alert(resultat.innerHTML = "Your new prescription is :" +newsphere_2.toFixed(2) + " sph and "+newcyl_2.toFixed(2) + " cylinder"); };
 
 
 
